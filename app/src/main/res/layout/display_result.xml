@@ -45,32 +45,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ten_dollar_field" />
 
-            <TextView
-                android:id="@+id/ten_dollar_decrease"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/red_rounded_corners"
-                android:gravity="center"
-                android:text="-"
-                android:textColor="@android:color/black" />
-
-            <EditText
-                android:id="@+id/ten_dollar_count"
-                android:layout_width="32dp"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/ten_dollar_increase"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/green_rounded_corners"
-                android:gravity="center"
-                android:text="+"
-                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,32 +59,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/twenty_dollar_field" />
 
-            <TextView
-                android:id="@+id/twenty_dollar_decrease"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/red_rounded_corners"
-                android:gravity="center"
-                android:text="-"
-                android:textColor="@android:color/black" />
-
-            <EditText
-                android:id="@+id/twenty_dollar_count"
-                android:layout_width="32dp"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/twenty_dollar_increase"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/green_rounded_corners"
-                android:gravity="center"
-                android:text="+"
-                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <Button

@@ -1,3 +1,16 @@
 <resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">Homework4</string>
+
+    <!-- Header for name field. -->
+    <string name="name_field">Name:</string>
+
+    <!-- Header for ten dollar tickets field. -->
+    <string name="ten_dollar_field">$10 Tickets:</string>
+
+    <!-- Header for twenty dollar tickets field. -->
+    <string name="twenty_dollar_field">$20 Tickets:</string>
+
+    <!-- Submit button. -->
+    <string name="submit_button">Submit</string>
 </resources>
