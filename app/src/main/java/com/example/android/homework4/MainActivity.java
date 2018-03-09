@@ -1,19 +1,26 @@
 package com.example.android.homework4;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    byte tenDollarCount = 0;
-    byte twentyDollarCount = 0;
+    private String username;
+    private byte tenDollarCount = 0;
+    private byte twentyDollarCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final EditText usernameField = findViewById(R.id.username);
+        username = usernameField.getText().toString();
 
         final TextView tenDollarCountField = findViewById(R.id.ten_dollar_count);
         tenDollarCountField.setText(String.valueOf(tenDollarCount));
@@ -67,5 +74,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final Button submitButton = findViewById(R.id.submit_button);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), DisplayResult.class);
+                intent.putExtra("EXTRA_USERNAME", username);
+                startActivity(intent);
+            }
+        });
     }
 }
