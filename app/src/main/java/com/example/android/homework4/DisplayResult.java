@@ -11,15 +11,21 @@ import android.widget.TextView;
 
 public class DisplayResult extends AppCompatActivity{
 
-    String username = getIntent().getStringExtra("EXTRA_USERNAME");
-    //byte tenDollarTicketCount = MainActivity.getTenDollarCount();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_result);
 
+        Intent intent = getIntent();
+
+        String username = intent.getStringExtra("username");
+        byte tenDollarCount = Byte.parseByte(intent.getStringExtra("tenDollarCount"));
+        byte twentyDollarCount = Byte.parseByte(intent.getStringExtra("twentyDollarCount"));
+        int total = 10 * tenDollarCount + 20 * twentyDollarCount;
+
+        String textToSet = "Thank you, " + username + ". Your total for (" + tenDollarCount + ") $10 ticket(s) and (" + twentyDollarCount + ") $20 ticket(s) is $" + total + ".";
+
         final TextView thankYouField = findViewById(R.id.thank_you_field);
-        thankYouField.setText("Thank you, " + username);
+        thankYouField.setText(textToSet);
     }
 }

@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final EditText usernameField = findViewById(R.id.username);
-        username = usernameField.getText().toString();
 
         final TextView tenDollarCountField = findViewById(R.id.ten_dollar_count);
         tenDollarCountField.setText(String.valueOf(tenDollarCount));
@@ -74,12 +73,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final Button submitButton = findViewById(R.id.submit_button);
+        Button submitButton = findViewById(R.id.submit_button);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), DisplayResult.class);
-                intent.putExtra("EXTRA_USERNAME", username);
+                username = usernameField.getText().toString();
+
+                Intent intent = new Intent(getApplicationContext(), DisplayResult.class);
+                intent.putExtra("username", username);
+                intent.putExtra("tenDollarCount", String.valueOf(tenDollarCount));
+                intent.putExtra("twentyDollarCount", String.valueOf(twentyDollarCount));
                 startActivity(intent);
             }
         });
